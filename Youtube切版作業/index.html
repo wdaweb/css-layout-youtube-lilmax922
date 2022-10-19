@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- 外部樣式 -->
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <title>Youtube 切版練習</title>
+</head>
+
+<body>
+  <!-- header-------------------------------------->
+  <div class="header">
+    <div class="logo-container">
+      <i class="ri-menu-line"></i>
+      <div class="logo">
+        <div class="logo-img" title="YouTube 首頁">
+          <img src="./images/yt-logo-dark.png">
+        </div>
+      </div>
+    </div>
+    <div class="search-container">
+      <form action="">
+        <input type="text" placeholder="搜尋" class="search-bar">
+        <button class="search-icon1" title="搜尋"><i class="ri-search-line"></i></button>
+        <button class="search-icon2" title="使用語音搜尋"><i class="ri-mic-fill"></i></button>
+      </form>
+    </div>
+    <div class="profile-container">
+      <ul>
+        <li><i class="ri-video-add-line" title="建立"></i></li>
+        <li><i class="ri-notification-4-line" title="通知"></i></li>
+        <li><i class="ri-ghost-line" id="user"></i></li>
+      </ul>
+
+    </div>
+    <!-- navigation-------------------------------------->
+    <div class="nav">
+      <ul>
+        <li tabindex="1">全部</li>
+        <li tabindex="2">直播中</li>
+        <li tabindex="3">音樂</li>
+        <li tabindex="4">遊戲</li>
+        <li tabindex="5">動畫</li>
+        <li tabindex="6">烹飪</li>
+        <li tabindex="7">旅遊勝地</li>
+        <li tabindex="8">卡通</li>
+        <li tabindex="9">最新上傳</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- sidebar-container ----------------------------------->
+  <div class="sidebar" tabindex="1">
+    <div class="sidebar-items">
+      <div class="line">
+        <ul>
+          <li tabindex="1" title="首頁"><i class="ri-home-line"><span>首頁</span></i></li>
+          <li tabindex="1" title="探索"><i class="ri-compass-3-line"><span>探索</span></i></li>
+          <li tabindex="1" title="Shorts"><i class="ri-fire-line"><span>Shorts</span></i></li>
+          <li tabindex="1" title="訂閱內容"><i class="ri-clapperboard-line"><span>訂閱內容</span></i></li>
+        </ul>
+      </div>
+      <div class="line">
+        <ul>
+          <li tabindex="1" title="媒體庫"><i class="ri-play-list-2-line"></i><span>媒體庫</span></i></li>
+          <li tabindex="1" title="觀看紀錄"><i class="ri-history-line"><span>觀看紀錄</span></i></li>
+          <li tabindex="1" title="你的影片"><i class="ri-video-line"><span>你的影片</span></i></li>
+          <li tabindex="1" title="稍後觀看"><i class="ri-time-line"><span>稍後觀看</span></i></i></li>
+          <li tabindex="1" title="喜歡的影片"><i class="ri-thumb-up-line"><span>喜歡的影片</span></i></li>
+        </ul>
+      </div>
+      <div class="line">
+        <p class="sidebar-explore">探索</p>
+        <ul>
+          <li tabindex="1" title="音樂"><i class="ri-mv-line"><span>音樂</span></i></li>
+          <li tabindex="1" title="遊戲"><i class="ri-game-line"><span>遊戲</span></i></li>
+          <li tabindex="1" title="美術"><i class="ri-palette-line"><span>美術</span></i></li>
+          <li tabindex="1" title="電影"><i class="ri-coupon-3-line"><span>電影</span></i></li>
+          <li tabindex="1" title="新聞"><i class="ri-global-line"><span>新聞</span></i></li>
+          <li tabindex="1" title="直播"><i class="ri-broadcast-line"><span>直播</span></i></li>
+          <li tabindex="1" title="投資"><i class="ri-funds-box-line"><span>投資</span></i></li>
+        </ul>
+      </div>
+      <div class="line">
+        <p>更多YOUTUBE功能</p>
+        <ul>
+          <li tabindex="1" title="YouTube Premium"><i class="yt ri-vip-crown-2-line"></i><span>YouTube Premium</span>
+          </li>
+          <li tabindex="1" title="YouTube Music"><i class="yt ri-disc-line"></i><span>YouTube Music</span></li>
+          <li tabindex="1" title="YouTube Kids"><i class="yt ri-bear-smile-line"></i><span>YouTube Kids</span></li>
+          <li tabindex="1" title="YouTube TV"><i class="yt ri-tv-2-line"></i><span>YouTube TV</span></li>
+        </ul>
+      </div>
+      <div class="line">
+        <ul>
+          <li tabindex="1" title="設定"><i class="ri-settings-3-line"><span>設定</span></i></li>
+          <li tabindex="1" title="檢舉紀錄"><i class="ri-flag-line"><span>檢舉紀錄</span></i></li>
+          <li tabindex="1" title="說明"><i class="ri-question-line"><span>說明</span></i></li>
+          <li tabindex="1" title="提供意見"><i class="ri-information-line"><span>提供意見</span></i></li>
+        </ul>
+      </div>
+      <div class="line info">
+        <div class="info1">
+          <a href="#">簡介</a>
+          <a href="#">媒體</a>
+          <a href="#">版權</a>
+          <a href="#">與我們聯絡</a>
+          <pre></pre>
+          <a href="#">創作者</a>
+          <a href="#">廣告</a>
+          <a href="#">開發人員</a>
+        </div>
+        <div class="info2">
+          <a href="#">條款</a>
+          <a href="#">隱私權</a>
+          <a href="#">政策與安全性</a>
+          <pre></pre>
+          <a href="#">YouTube 運作方式</a>
+          <a href="#">測試新功能</a>
+        </div>
+        <div class="copyRight">
+          &copy; 2022 Max Hu
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contents starts here ------------------>
+  <div id="contents">
+    <!-- 音樂 -->
+    <div class="row row1">
+      <div class="col">
+        <div class="card">
+          <div class="img">
+            <img src="./images/music/King Gnu - 逆夢.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto">
+              <img src="./images/channelPhoto/King Gnu.jpg" title="King Gnu official YouTube channel">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="King Gnu - 逆夢">King Gnu - 逆夢</div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="King Gnu official YouTube channel">
+                  <span id="channelName">King Gnu official YouTube channel</span>
+                </div>
+                <div>
+                  觀看次數：6377萬次 &bull; 9 個月前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img">
+            <img src="./images/music/Vaundy - 東京フラッシュ.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto">
+              <img src="./images/channelPhoto/Vaundy.jpg" title="Vaundy">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="東京フラッシュ / Vaundy ：MUSIC VIDEO">東京フラッシュ / Vaundy ：MUSIC VIDEO</div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="Vaundy">
+                  <span id="channelName">Vaundy</span>
+                </div>
+                <div>
+                  觀看次數：4942萬次 &bull; 3 年前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img">
+            <img src="./images/music/宇多田ヒカル - First Love.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto">
+              <img src="./images/channelPhoto/宇多田光.jpg" title="Hikaru Utada">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="宇多田ヒカル - First Love">宇多田ヒカル - First Love</div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="Hikaru Utada">
+                  <span id="channelName">Hikaru Utada</span>
+                </div>
+                <div>
+                  觀看次數：6647萬次 &bull; 6 年前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img">
+            <img src="./images/music/宇多田ヒカル - Goodbye Happiness.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto">
+              <img src="./images/channelPhoto/宇多田光.jpg" title="Hikaru Utada">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="宇多田ヒカル - Goodbye Happiness">宇多田ヒカル - Goodbye Happiness</div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="Hikaru Utada">
+                  <span id="channelName">Hikaru Utada</span>
+                </div>
+                <div>
+                  觀看次數：2402萬次 &bull; 7 年前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img">
+            <img src="./images/music/[MV] IU(아이유) _ Blueming(블루밍).jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto">
+              <img src="./images/channelPhoto/1theK.jpg" title="1theK (원더케이)">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="[MV] IU(아이유) _ Blueming(블루밍)">[MV] IU(아이유) _ Blueming(블루밍)</div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="1theK (원더케이)">
+                  <span id="channelName">1theK (원더케이)</span>
+                </div>
+                <div>
+                  觀看次數：1.5億次 &bull; 2 年前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img">
+            <img src="./images/music/[MV] IU(아이유)_LILAC(라일락).jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto">
+              <img src="./images/channelPhoto/1theK.jpg" title="1theK (원더케이)">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="[MV] IU(아이유)_LILAC(라일락)">[MV] IU(아이유)_LILAC(라일락)</div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="1theK (원더케이)">
+                  <span id="channelName">1theK (원더케이)</span>
+                </div>
+                <div>
+                  觀看次數：9049萬次 &bull; 1 年前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img">
+            <img src="./images/music/TAEYEON 태연 'INVU' MV.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto">
+              <img src="./images/channelPhoto/SMTOWN.jpg" title="SMTOWN">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="TAEYEON 태연 'INVU' MV">TAEYEON 태연 'INVU' MV</div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="SMTOWN">
+                  <span id="channelName">SMTOWN</span>
+                </div>
+                <div>
+                  觀看次數：4452萬次 &bull; 8 個月前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img">
+            <img src="./images/music/AOA BLACK - MOYA (모야) MV.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto">
+              <img src="./images/channelPhoto/AOA.jpg" title="AOA">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="AOA BLACK - MOYA (모야) MV">AOA BLACK - MOYA (모야) MV</div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="AOA">
+                  <span id="channelName">AOA</span>
+                </div>
+                <div>
+                  觀看次數：1632萬次 &bull; 9 年前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 斜咖 -->
+    <div class="row row2">
+      <div class="col">
+        <div class="card">
+          <div class="img">
+            <img src="./images/斜咖/晨晨單挑雙石像.png" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto">
+              <img src="./images/channelPhoto/統晨大戲院.jpg" title="統晨大戲院">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="【統神】張家大戰開打，晨晨單挑雙石像 再找奶奶加入戰局，場面一度混亂，晨晨：我知道了，謝謝你！">【統神】張家大戰開打，晨晨單挑雙石像
+                  再找奶奶加入戰局，場面一度混亂，晨晨：我知道了，謝謝你！</div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="統晨大戲院">
+                  <span id="channelName">統晨大戲院</span>
+                </div>
+                <div>
+                  觀看次數：40萬次 &bull; 3 週前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/斜咖/每次都輸.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/統晨大戲院.jpg" title="統晨大戲院">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="【統神】晨晨撒嬌想玩糖豆人，大的小的一直要００３幫忙做事弄得忙不過來，晨晨：那就不要管他">
+                  【統神】晨晨撒嬌想玩糖豆人，大的小的一直要００３幫忙做事弄得忙不過來，晨晨：那就不要管他
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="統晨大戲院">
+                  <span id="channelName">統晨大戲院</span>
+                </div>
+                <div class="views">
+                  觀看次數：6.2萬次 &bull; 2 天前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/斜咖/奶奶睡著了.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/統晨大戲院.jpg" title="統晨大戲院">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="【統神】統媽生氣了！拿衣架準備揍人，阿航差點引發統媽晨晨的第三次世界大戰！">
+                  【統神】統媽生氣了！拿衣架準備揍人，阿航差點引發統媽晨晨的第三次世界大戰！
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="統晨大戲院">
+                  <span id="channelName">統晨大戲院</span>
+                </div>
+                <div class="views">
+                  觀看次數：99萬次 &bull; 6 個月前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/斜咖/誰關門.png" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/統晨大戲院.jpg" title="統晨大戲院">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="【統神】誰關門！！！">
+                  【統神】誰關門！！！
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="統晨大戲院">
+                  <span id="channelName">統晨大戲院</span>
+                </div>
+                <div class="views">
+                  觀看次數：49萬次 &bull; 6 個月前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/斜咖/恨熊熊-肥臉抱枕.png" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/NL.jpg" title="NL">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="女粉也買了～拿到我抱枕的人87%都會先做這件事？兩個字 大熱銷！念觀眾留言環節～你們就繼續亂搞我的臉沒有關係｜NL實況精華｜">
+                  女粉也買了～拿到我抱枕的人87%都會先做這件事？兩個字 大熱銷！念觀眾留言環節～你們就繼續亂搞我的臉沒有關係｜NL實況精華｜
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="NL">
+                  <span id="channelName">NL</span>
+                </div>
+                <div class="views">
+                  觀看次數：5.2萬次 &bull; 4 個月前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/斜咖/三個統神.png" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/廢片亂剪.jpg" title="廢片亂剪">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="冠緯&RB世誠&花輪-三個統神在吵架">
+                  冠緯&RB世誠&花輪-三個統神在吵架
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="廢片亂剪">
+                  <span id="channelName">廢片亂剪</span>
+                </div>
+                <div class="views">
+                  觀看次數：17萬次 &bull; 8 個月前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/斜咖/兩個不沾鍋.png" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/羅傑 Roger.jpg" title="羅傑 Roger">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="【龜狗】兩個不沾鍋 頂上戰爭不沾 廖老大不沾 @龜狗 SweetCamper  ｜By-P眼怪｜《爐石戰記HearthStone》｜Roger9527">
+                  【龜狗】兩個不沾鍋 頂上戰爭不沾 廖老大不沾 @龜狗 SweetCamper ｜By-P眼怪｜《爐石戰記HearthStone》｜Roger9527
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="羅傑 Roger">
+                  <span id="channelName">羅傑 Roger</span>
+                </div>
+                <div class="views">
+                  觀看次數：4.3萬次 &bull; 1 個月前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/斜咖/冠緯&RB世誠-小朋友吵架.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/廢片亂剪.jpg" title="廢片亂剪">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="冠緯&RB世誠-小朋友吵架">
+                  冠緯&RB世誠-小朋友吵架
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="廢片亂剪">
+                  <span id="channelName">廢片亂剪</span>
+                </div>
+                <div class="views">
+                  觀看次數：3.5萬次 &bull; 8 個月前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 動漫 -->
+    <div class="row row3">
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/動漫/完全新作PV “ROAD OF NARUTO”.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/studioぴえろ【公式】.jpg" title="studioぴえろ【公式】">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="完全新作PV “ROAD OF NARUTO">
+                  完全新作PV “ROAD OF NARUTO”
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="studioぴえろ【公式】">
+                  <span id="channelName">studioぴえろ【公式】</span>
+                </div>
+                <div class="views">
+                  觀看次數：1210萬次 &bull; 12 天前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/動漫/Naruto-remake.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/STORM MASTER.jpg" title="STORM MASTER">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="Naruto VS Road Of Naruto (PV)-Visual Comparison (NARUTO 20th Anniversary)">
+                  Naruto VS Road Of Naruto (PV)-Visual Comparison (NARUTO 20th Anniversary)
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="STORM MASTER">
+                  <span id="channelName">STORM MASTER</span>
+                </div>
+                <div class="views">
+                  觀看次數：49萬次 &bull; 8 天前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/動漫/Cyberpunk Edgerunners.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/Netflix.jpg" title="Netflix">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div
+                  title="Cyberpunk: Edgerunners | “I Really Want to Stay At Your House” by Rosa Walton | Music Video">
+                  Cyberpunk: Edgerunners | “I Really Want to Stay At Your House” by Rosa Walton | Music Video
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="Netflix">
+                  <span id="channelName">Netflix</span>
+                </div>
+                <div class="views">
+                  觀看次數：206萬次 &bull; 11 天前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="img"><img src="./images/動漫/Arcane Official Trailer.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="channelPhoto"><img src="./images/channelPhoto/League of Legends.jpg" title="League of Legends">
+            </div>
+            <div class="disc">
+              <div class="title">
+                <div title="Arcane: Official Trailer">
+                  Arcane: Official Trailer
+                </div>
+              </div>
+              <div class="info">
+                <div class="channelName" title="League of Legends">
+                  <span id="channelName">League of Legends</span>
+                </div>
+                <div class="views">
+                  觀看次數：2017萬次 &bull; 1 年前
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <span><i class="ri-time-line"></i>稍後觀看</span>
+              <span><i class="ri-play-list-2-line"></i>加入待播清單</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
